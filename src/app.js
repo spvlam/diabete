@@ -4,6 +4,7 @@ const exhbs = require('express-handlebars')
 const path = require('path')
 const hbs = require('handlebars')
 const morgan = require('morgan')
+const port = process.env.PORT || 3000
 // morgan is a http request logger middleware for nodejs
 app.use(morgan('tiny'))
 
@@ -27,6 +28,6 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.use(express.json());
 app.use(urlencodedParser)
 router(app)
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('listening on port 3000')
 })

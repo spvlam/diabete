@@ -22,7 +22,10 @@ class controllers{
         process.stdout.on('data', function(data){
             var x = data.toString()
             var result = x.substr(105,106)
-            var Rresult = result*100 > 50
+            const  num = Number(result)
+            console.log(num)
+            var Rresult = num < 0.5
+            console.log(Rresult)
             res.render('handle',{result,pregnancy,glucozo,height,weight,age,Rresult,insulin,blood})
         })
     }
