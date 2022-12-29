@@ -5,6 +5,10 @@ const path = require('path')
 const hbs = require('handlebars')
 const morgan = require('morgan')
 const port = process.env.PORT || 3000
+//hbd register 
+hbs.registerHelper("subtr",function(a,b){
+    return a-b
+})
 // morgan is a http request logger middleware for nodejs
 app.use(morgan('tiny'))
 

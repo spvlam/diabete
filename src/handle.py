@@ -6,9 +6,9 @@ import statsmodels.api as sm
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_score
 
-df= pd.read_csv('diabetes.csv')
+df= pd.read_csv('src/diabetes.csv')
 
-test1File = open('test.csv','w')
+test1File = open('src/test.csv','w')
 test1File.write('Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age\n')
 
 # input value into test file 
@@ -18,7 +18,7 @@ BloodPresure = sys.argv[6]
 Skinthinknss= 35
 insulin = sys.argv[5]
 BMI = sys.argv[3]
-diabetPredictFuntion=3
+diabetPredictFuntion=0.68
 Age= sys.argv[4]
 inputS = f"{pregnancy},{glu},{BloodPresure},{Skinthinknss},{insulin},{BMI},{diabetPredictFuntion},{Age}"
 test1File.write(inputS)
