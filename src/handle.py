@@ -60,10 +60,10 @@ results = logistic_regression.predict(test1)
 accuracies = cross_val_score(estimator=logistic_regression,
                             X=X_train,y=y_train,
                             cv=30)
- # we can increase the accuracy of the model by increasing the datatest(max when cv >20)
- # accuracy depends on the trained data 
-# print("Average Accuracy: {:.2f} %".format(accuracies.mean()*100))
-# print("Standart Deviation of Accuracies: {:.2f} %".format(accuracies.std()*100))
+# we can increase the accuracy of the model by increasing the datatest(max when cv >20)
+# accuracy depends on the trained data by the command 
+        # print("Average Accuracy: {:.2f} %".format(accuracies.mean()*100))
+        # print("Standart Deviation of Accuracies: {:.2f} %".format(accuracies.std()*100))
 #  K-Fold Cross Validation
 
 # results2 =pd.DataFrame(logistic_regression.predict_proba(test1),
