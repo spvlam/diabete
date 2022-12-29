@@ -10,6 +10,7 @@ const diabete = new schema({
     diabeteFunction:{typeof: Number, default:3},
     insulin:Number,
     bloodPresure:Number,
+    height:{typeof : Number, default :170}
 })
 module.exports = mongoose.Model('diabete',diabete)
 

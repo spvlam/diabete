@@ -23,10 +23,8 @@ class controllers{
             var x = data.toString()
             var result = x.substr(105,106)
             const  num = Number(result)
-            console.log(num)
-            var Rresult = num < 0.5
-            console.log(Rresult)
-            res.render('handle',{result,pregnancy,glucozo,height,weight,age,Rresult,insulin,blood})
+            var Rresult = num < 50      
+            res.render('handle',{result,pregnancy,glucozo,height,weight,age,Rresult,insulin,blood})         
         })
     }
 }
