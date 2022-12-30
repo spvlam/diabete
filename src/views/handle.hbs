@@ -26,7 +26,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+        margin-top: 30px;
     }
 </style>
 <div class="formtext">
@@ -62,20 +62,20 @@
     </div>
     <button type="submit" class="btn btn-primary ">Submit</button>
 </form>
-<form action="" name=" result" class="result" >
+{{!-- <form action="" name=" result" class="result" >
    <div class="mb-3">
         <label for="result" class="form-label">Result</label>
         <input value="{{result}}" type="text" class="form-control" id="result" aria-describedby="emailHelp" name="result">
     </div>
-</form>
+</form> --}}
 
  <div class="infor" style="background-color: rgb(180, 184, 180); height:200px;width:80%;">
     {{#if Rresult}}
     <h3>You are not getting diabetes  </h3>
-    <h3>It is about {{subtr 100 result}}%</h3>
+    <h3>It is about {{subtr 100 result2}}%</h3>
     {{else }}
     <h3>You are not getting diabetes  </h3>
-    <h3>It is about {{result}}%</h3>
+    <h3>It is about {{result2}}%</h3>
     {{/if}}
 </div>
 </div>

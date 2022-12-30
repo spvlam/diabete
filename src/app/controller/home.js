@@ -22,9 +22,15 @@ class controllers{
         process.stdout.on('data', function(data){
             var x = data.toString()
             var result = x.substr(105,106)
-            const  num = Number(result)
-            var Rresult = num < 50      
-            res.render('handle',{result,pregnancy,glucozo,height,weight,age,Rresult,insulin,blood})         
+            var result2 = result.substr(0,5)
+            console.log(typeof result2)
+            console.log(typeof result)
+            console.log(result)
+            const  num = Number(result.substr(0,5))
+
+            var Rresult = num < 50   
+
+            res.render('handle',{result2,pregnancy,glucozo,height,weight,age,Rresult,insulin,blood})         
         })
     }
 }
